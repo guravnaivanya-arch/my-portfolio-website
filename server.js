@@ -1,6 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose"); // Import our database helper
 const app = express();
+const path = require("path");
+
+// 1. Serves all your styling, layout images, and frontend assets
+app.use(express.static(path.join(__dirname)));
+
+// 2. Delivers your main index.html file whenever someone visits your link
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
 const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
