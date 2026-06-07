@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <!-- Connecting our CSS paint file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. NAVIGATION BAR (The Menu at the top) -->
+    <nav class="navbar">
+        <div class="logo">MyPortfolio</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 2. HERO SECTION (The Big Welcome) -->
+    <header class="hero-section" id="about">
+        <h1>Hi, I'm a Developer</h1>
+        <p>I create beautiful digital experiences with clean code and modern designs.</p>
+    </header>
+
+    <!-- 3. PROJECTS SECTION (Your work cards) -->
+    <section class="section-container" id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <h3>Solo Traveler Safety App</h3>
+                <p>A smart web application featuring live GPS tracking and emergency alerts built to keep travelers safe.</p>
+                <span class="tag">React.js</span> <span class="tag">Node.js</span>
+            </div>
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <h3>Financial Dashboard</h3>
+                <p>A clean, visual interface used to track daily expenses, visualize data, and manage personal budgets.</p>
+                <span class="tag">UI/UX</span> <span class="tag">Figma</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SKILLS SECTION -->
+    <section class="section-container" id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-list">
+            <span class="skill-item">HTML5</span>
+            <span class="skill-item">CSS3</span>
+            <span class="skill-item">JavaScript</span>
+            <span class="skill-item">Figma Design</span>
+            <span class="skill-item">Node.js</span>
+        </div>
+    </section>
+
+    <!-- 5. CONTACT FORM -->
+    <section class="section-container" id="contact">
+        <h2>Get In Touch</h2>
+        <p>Want to collaborate? Drop a message below!</p>
+        <form class="contact-form" action="http://localhost:3000/submit-form" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html>
